@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F9n-cR-QLf">
+                                <rect key="frame" x="30" y="160" width="261" height="184"/>
+                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5P6-dE-Qzv">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
@@ -32,28 +35,31 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="top" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x69-Jz-O28">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x69-Jz-O28">
                                 <rect key="frame" x="112" y="109" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="bottom" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5d4-2H-9k8">
-                                <rect key="frame" x="112" y="414" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5d4-2H-9k8">
+                                <rect key="frame" x="112" y="372" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F9n-cR-QLf">
-                                <rect key="frame" x="30" y="177" width="261" height="183"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="x69-Jz-O28" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="89" id="29u-KL-7Ul"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="5P6-dE-Qzv" secondAttribute="bottom" id="4Uk-bq-2ZS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5d4-2H-9k8" secondAttribute="trailing" constant="95" id="5M9-TO-agd"/>
+                            <constraint firstItem="5d4-2H-9k8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="96" id="Dac-xR-gfI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="F9n-cR-QLf" secondAttribute="trailing" constant="13" id="IRs-XN-EQx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5P6-dE-Qzv" secondAttribute="trailing" constant="-16" id="OBn-bV-uiP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x69-Jz-O28" secondAttribute="trailing" constant="95" id="S7W-ZK-dsu"/>
                             <constraint firstItem="F9n-cR-QLf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="14" id="Y1V-Iz-8jE"/>
-                            <constraint firstItem="5P6-dE-Qzv" firstAttribute="top" secondItem="F9n-cR-QLf" secondAttribute="bottom" constant="164" id="aBy-CB-m3F"/>
-                            <constraint firstItem="F9n-cR-QLf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="157" id="pwq-dh-bgi"/>
+                            <constraint firstItem="5P6-dE-Qzv" firstAttribute="top" secondItem="F9n-cR-QLf" secondAttribute="bottom" constant="180" id="aBy-CB-m3F"/>
+                            <constraint firstItem="F9n-cR-QLf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="140" id="pwq-dh-bgi"/>
+                            <constraint firstItem="5d4-2H-9k8" firstAttribute="top" secondItem="F9n-cR-QLf" secondAttribute="bottom" constant="28" id="ss4-Jm-2PT"/>
+                            <constraint firstItem="x69-Jz-O28" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="96" id="xUB-PH-On0"/>
                             <constraint firstItem="5P6-dE-Qzv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="zQz-Sc-3Mh"/>
                         </constraints>
                     </view>

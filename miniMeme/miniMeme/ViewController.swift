@@ -8,13 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
 
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    
+    let memeTextAttributes = [
+        NSStrokeColorAttributeName: UIColor.blackColor(),
+        NSForegroundColorAttributeName: UIColor.whiteColor(),
+        NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        NSStrokeWidthAttributeName: 12
+    ]
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -23,14 +30,24 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        topTextField.text = "TOP"
+        bottomTextField.text = "BOTTOM"
+        topTextField.textAlignment = .Center
+        bottomTextField.textAlignment = .Center
+        
+        self.topTextField.delegate = self
+        self.bottomTextField.delegate = self
+        
+        self.topTextField.defaultTextAttributes = memeTextAttributes
+        self.bottomTextField.defaultTextAttributes = memeTextAttributes
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
+    
     
     @IBAction func pickImageFromAlbum(sender: AnyObject) {
         let pickerController = UIImagePickerController()
@@ -46,6 +63,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         self.presentViewController(imagePicker, animated: true, completion: nil)
         
     }
+    
     // - UIImagePickerControllerDelegate methods
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -59,6 +77,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    // - UITextFieldDelegate method
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        textField.text = ""
+    }
     
 
 }

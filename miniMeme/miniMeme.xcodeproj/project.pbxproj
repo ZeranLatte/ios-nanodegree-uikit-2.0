@@ -13,6 +13,7 @@
 		4FDE52461BA34EF3005A76F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE52451BA34EF3005A76F9 /* Images.xcassets */; };
 		4FDE52491BA34EF3005A76F9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE52471BA34EF3005A76F9 /* LaunchScreen.xib */; };
 		4FDE52551BA34EF3005A76F9 /* miniMemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE52541BA34EF3005A76F9 /* miniMemeTests.swift */; };
+		4FDE525F1BA3954A005A76F9 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE525E1BA3954A005A76F9 /* TextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		4FDE524E1BA34EF3005A76F9 /* miniMemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = miniMemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDE52531BA34EF3005A76F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FDE52541BA34EF3005A76F9 /* miniMemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniMemeTests.swift; sourceTree = "<group>"; };
+		4FDE525E1BA3954A005A76F9 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				4FDE52421BA34EF3005A76F9 /* Main.storyboard */,
 				4FDE52451BA34EF3005A76F9 /* Images.xcassets */,
 				4FDE52471BA34EF3005A76F9 /* LaunchScreen.xib */,
+				4FDE525E1BA3954A005A76F9 /* TextFieldDelegate.swift */,
 				4FDE523C1BA34EF3005A76F9 /* Supporting Files */,
 			);
 			path = miniMeme;
@@ -214,6 +217,7 @@
 			files = (
 				4FDE52411BA34EF3005A76F9 /* ViewController.swift in Sources */,
 				4FDE523F1BA34EF3005A76F9 /* AppDelegate.swift in Sources */,
+				4FDE525F1BA3954A005A76F9 /* TextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
