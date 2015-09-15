@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FB611AA1BA7D8E000B79693 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB611A91BA7D8E000B79693 /* ActivityViewController.swift */; };
 		4FDE523F1BA34EF3005A76F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE523E1BA34EF3005A76F9 /* AppDelegate.swift */; };
 		4FDE52411BA34EF3005A76F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE52401BA34EF3005A76F9 /* ViewController.swift */; };
 		4FDE52441BA34EF3005A76F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE52421BA34EF3005A76F9 /* Main.storyboard */; };
 		4FDE52461BA34EF3005A76F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE52451BA34EF3005A76F9 /* Images.xcassets */; };
 		4FDE52491BA34EF3005A76F9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE52471BA34EF3005A76F9 /* LaunchScreen.xib */; };
 		4FDE52551BA34EF3005A76F9 /* miniMemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE52541BA34EF3005A76F9 /* miniMemeTests.swift */; };
-		4FDE525F1BA3954A005A76F9 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE525E1BA3954A005A76F9 /* TextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4FB611A91BA7D8E000B79693 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		4FDE52391BA34EF3005A76F9 /* miniMeme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniMeme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDE523D1BA34EF3005A76F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FDE523E1BA34EF3005A76F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +38,6 @@
 		4FDE524E1BA34EF3005A76F9 /* miniMemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = miniMemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDE52531BA34EF3005A76F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FDE52541BA34EF3005A76F9 /* miniMemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniMemeTests.swift; sourceTree = "<group>"; };
-		4FDE525E1BA3954A005A76F9 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +82,9 @@
 				4FDE523E1BA34EF3005A76F9 /* AppDelegate.swift */,
 				4FDE52401BA34EF3005A76F9 /* ViewController.swift */,
 				4FDE52421BA34EF3005A76F9 /* Main.storyboard */,
+				4FB611A91BA7D8E000B79693 /* ActivityViewController.swift */,
 				4FDE52451BA34EF3005A76F9 /* Images.xcassets */,
 				4FDE52471BA34EF3005A76F9 /* LaunchScreen.xib */,
-				4FDE525E1BA3954A005A76F9 /* TextFieldDelegate.swift */,
 				4FDE523C1BA34EF3005A76F9 /* Supporting Files */,
 			);
 			path = miniMeme;
@@ -216,8 +216,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FDE52411BA34EF3005A76F9 /* ViewController.swift in Sources */,
+				4FB611AA1BA7D8E000B79693 /* ActivityViewController.swift in Sources */,
 				4FDE523F1BA34EF3005A76F9 /* AppDelegate.swift in Sources */,
-				4FDE525F1BA3954A005A76F9 /* TextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +413,7 @@
 				4FDE525A1BA34EF3005A76F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FDE525B1BA34EF3005A76F9 /* Build configuration list for PBXNativeTarget "miniMemeTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +422,7 @@
 				4FDE525D1BA34EF3005A76F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
