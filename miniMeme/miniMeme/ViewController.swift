@@ -26,6 +26,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
        
     }
     
+    @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
@@ -44,7 +45,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
-        
         topTextField.textAlignment = .Center
         bottomTextField.textAlignment = .Center
         self.subscribeToKeyboardNotification()
@@ -56,6 +56,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         self.topTextField.delegate = self
         self.bottomTextField.delegate = self
         
+        
         self.topTextField.defaultTextAttributes = memeTextAttributes
         self.bottomTextField.defaultTextAttributes = memeTextAttributes
         
@@ -66,6 +67,14 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         self.unsubscribeFromKeyboardNotification()
+    }
+    
+    
+    @IBAction func cancelAction(sender: AnyObject) {
+        //self.viewWillDisappear(true)
+        self.imagePickerView.image = nil
+        self.viewDidLoad()
+        self.viewWillAppear(false)
     }
     
 
@@ -91,20 +100,21 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     @IBAction func shareImage() {
-        let image = self.save().memedImage
-        let activity_controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-        self.presentViewController(activity_controller, animated: true, completion: nil)
-        
-        
-        
-        
-        //self.dismissViewControllerAnimated(true, completion: nil)
+
+        let image = self.generateMemedImage()
+        let avc = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        self.presentViewController(avc, animated: true, completion: nil)
+        self.save()
     }
+    
+    
+   
     
     // - UIImagePickerControllerDelegate methods
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.imagePickerView.image = image
+            imagePickerView.autoresizingMask = UIViewAutoresizing.FlexibleBottomMargin
             imagePickerView.contentMode = UIViewContentMode.ScaleAspectFit
             self.shareButton.enabled = true
             self.dismissViewControllerAnimated(true, completion: nil)
@@ -162,6 +172,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     func generateMemedImage() -> UIImage {
         
         self.toolBar.hidden = true
+        self.navBar.hidden = true
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
         self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
@@ -169,6 +180,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         UIGraphicsEndImageContext()
         
         self.toolBar.hidden = false
+        self.navBar.hidden = false
         
         return memedImage
     }
