@@ -35,8 +35,8 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5d4-2H-9k8" userLabel="bottomTextField">
-                                <rect key="frame" x="105" y="478" width="110" height="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5d4-2H-9k8" userLabel="bottomTextField">
+                                <rect key="frame" x="105" y="495" width="110" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -75,7 +75,7 @@
                             <constraint firstItem="0AO-z1-I8p" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-15" id="XGk-P9-otv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="x69-Jz-O28" secondAttribute="trailing" constant="89" id="aCz-8Z-6UB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0AO-z1-I8p" secondAttribute="trailing" constant="-17" id="bNS-SA-Fxn"/>
-                            <constraint firstItem="5d4-2H-9k8" firstAttribute="bottom" secondItem="F9n-cR-QLf" secondAttribute="bottom" constant="-29" id="ccB-Tv-jaN"/>
+                            <constraint firstItem="5d4-2H-9k8" firstAttribute="bottom" secondItem="F9n-cR-QLf" secondAttribute="bottom" constant="-12" id="ccB-Tv-jaN"/>
                             <constraint firstItem="x69-Jz-O28" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="89" id="d5W-e2-q6X"/>
                             <constraint firstItem="F9n-cR-QLf" firstAttribute="top" secondItem="0AO-z1-I8p" secondAttribute="bottom" id="iPT-3j-x6A"/>
                             <constraint firstItem="F9n-cR-QLf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="jW2-29-PfX"/>
