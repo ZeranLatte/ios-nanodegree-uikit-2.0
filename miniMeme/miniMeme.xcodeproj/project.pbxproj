@@ -185,6 +185,7 @@
 		4FDE52311BA34EF3005A76F9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Z Latte";
 				TargetAttributes = {
@@ -472,6 +473,7 @@
 				4FBE64AA1BA8F0B800DE884A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FDE52341BA34EF3005A76F9 /* Build configuration list for PBXProject "miniMeme" */ = {
 			isa = XCConfigurationList;
