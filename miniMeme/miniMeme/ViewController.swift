@@ -10,21 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
-    // meme struct
-    struct Meme {
-        var topText: String!
-        var bottomText: String!
-        var originalImage: UIImage!
-        var memedImage: UIImage!
-        
-        init(topText: String, bottomText: String, originalImage: UIImage, memedImage: UIImage) {
-            self.topText = topText
-            self.bottomText = bottomText
-            self.originalImage = originalImage
-            self.memedImage = memedImage
-        }
-       
-    }
+    
     
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
@@ -106,11 +92,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         save()
     }
     
-    
-   
-    
     // - UIImagePickerControllerDelegate methods
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imagePickerView.image = image
             imagePickerView.autoresizingMask = UIViewAutoresizing.FlexibleBottomMargin
@@ -168,10 +151,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     // Generating a Meme Object
-    func save() -> Meme {
-        let saved = Meme(topText: topTextField.text, bottomText: bottomTextField.text, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
-        return saved
-    }
+//    func save() -> Meme {
+//        let saved = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
+//        return saved
+//    }
     
     func generateMemedImage() -> UIImage {
         
@@ -187,6 +170,16 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         navBar.hidden = false
         
         return memedImage
+    }
+    
+    //code for shared model
+    func save() {
+        var meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
+        
+        //Add it to the memes array in the Application Delegate
+        let object = UIApplication.sharedApplication().delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
     }
     
 

@@ -14,6 +14,9 @@
 		4FDE52461BA34EF3005A76F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE52451BA34EF3005A76F9 /* Images.xcassets */; };
 		4FDE52491BA34EF3005A76F9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDE52471BA34EF3005A76F9 /* LaunchScreen.xib */; };
 		4FDE52551BA34EF3005A76F9 /* miniMemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDE52541BA34EF3005A76F9 /* miniMemeTests.swift */; };
+		4FF4C7001BB35B0300CB44AC /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF4C6FF1BB35B0300CB44AC /* Meme.swift */; settings = {ASSET_TAGS = (); }; };
+		4FF4C7021BB361C500CB44AC /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF4C7011BB361C500CB44AC /* MemeTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		4FF4C7041BB361EA00CB44AC /* MemeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF4C7031BB361EA00CB44AC /* MemeCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,9 @@
 		4FDE524E1BA34EF3005A76F9 /* miniMemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = miniMemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDE52531BA34EF3005A76F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FDE52541BA34EF3005A76F9 /* miniMemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miniMemeTests.swift; sourceTree = "<group>"; };
+		4FF4C6FF1BB35B0300CB44AC /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		4FF4C7011BB361C500CB44AC /* MemeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
+		4FF4C7031BB361EA00CB44AC /* MemeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,9 @@
 				4FDE52401BA34EF3005A76F9 /* ViewController.swift */,
 				4FDE52421BA34EF3005A76F9 /* Main.storyboard */,
 				4FB611A91BA7D8E000B79693 /* ActivityViewController.swift */,
+				4FF4C6FF1BB35B0300CB44AC /* Meme.swift */,
+				4FF4C7011BB361C500CB44AC /* MemeTableViewController.swift */,
+				4FF4C7031BB361EA00CB44AC /* MemeCollectionViewController.swift */,
 				4FDE52451BA34EF3005A76F9 /* Images.xcassets */,
 				4FDE52471BA34EF3005A76F9 /* LaunchScreen.xib */,
 				4FDE523C1BA34EF3005A76F9 /* Supporting Files */,
@@ -186,7 +195,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Z Latte";
 				TargetAttributes = {
 					4FBE649D1BA8F0B800DE884A = {
@@ -261,7 +270,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FDE52411BA34EF3005A76F9 /* ViewController.swift in Sources */,
+				4FF4C7001BB35B0300CB44AC /* Meme.swift in Sources */,
 				4FB611AA1BA7D8E000B79693 /* ActivityViewController.swift in Sources */,
+				4FF4C7021BB361C500CB44AC /* MemeTableViewController.swift in Sources */,
+				4FF4C7041BB361EA00CB44AC /* MemeCollectionViewController.swift in Sources */,
 				4FDE523F1BA34EF3005A76F9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +361,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -367,7 +380,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos9.0;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -404,7 +417,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos9.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -415,6 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = miniMeme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Z-Latte.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -425,6 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = miniMeme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Z-Latte.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -443,6 +458,7 @@
 				);
 				INFOPLIST_FILE = miniMemeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Z-Latte.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/miniMeme.app/miniMeme";
 			};
@@ -458,6 +474,7 @@
 				);
 				INFOPLIST_FILE = miniMemeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Z-Latte.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/miniMeme.app/miniMeme";
 			};
