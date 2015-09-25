@@ -15,18 +15,28 @@ class MemeTableViewController: UIViewController, UITableViewDataSource{
         return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.rightBarButtonItem?.enabled = true
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCellWithIdentifier("memeCells", forIndexPath: indexPath)
+        let meme = self.memes[indexPath.row]
+        cell.imageView?.image = meme.memedImage
+        cell.textLabel?.text = meme.topText
+        return cell
+        
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailController = self.storyboard?.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
         detailController.meme = self.memes[indexPath.row]
+        detailController.imageView!.image = detailController.meme.memedImage
         self.navigationController!.pushViewController(detailController, animated: true)
         
     }

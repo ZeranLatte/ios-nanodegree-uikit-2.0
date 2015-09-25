@@ -38,7 +38,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        shareButton.enabled = false
+        shareButton.enabled = true
         topTextField.delegate = self
         bottomTextField.delegate = self
         
@@ -174,7 +174,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     //code for shared model
     func save() {
-        var meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
+        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
         
         //Add it to the memes array in the Application Delegate
         let object = UIApplication.sharedApplication().delegate

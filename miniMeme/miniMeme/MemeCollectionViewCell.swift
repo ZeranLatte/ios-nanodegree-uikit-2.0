@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MemeCollectionViewCell {
+class MemeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var memeImageView: UIImageView!
     
