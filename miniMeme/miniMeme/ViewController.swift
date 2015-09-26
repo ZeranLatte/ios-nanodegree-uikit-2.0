@@ -88,8 +88,17 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 
         let image = generateMemedImage()
         let avc = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        
+        avc.completionWithItemsHandler = {activity, completed, items, error in
+            if completed {
+                //Save the image
+                self.save()
+                //Dismiss the view controller
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+        }
         presentViewController(avc, animated: true, completion: nil)
-        save()
+        //save()
     }
     
     // - UIImagePickerControllerDelegate methods

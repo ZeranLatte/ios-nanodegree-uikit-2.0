@@ -17,9 +17,8 @@ class MemeTableViewController: UIViewController, UITableViewDataSource{
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationItem.rightBarButtonItem?.enabled = true
     }
-    
+        
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
     }
