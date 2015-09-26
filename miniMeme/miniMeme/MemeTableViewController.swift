@@ -17,8 +17,9 @@ class MemeTableViewController: UIViewController, UITableViewDataSource{
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        print(memes.count)
     }
-        
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
     }
@@ -35,7 +36,7 @@ class MemeTableViewController: UIViewController, UITableViewDataSource{
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailController = self.storyboard?.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
         detailController.meme = self.memes[indexPath.row]
-        detailController.imageView!.image = detailController.meme.memedImage
+        //detailController.imageView?.image = detailController.meme.memedImage
         self.navigationController!.pushViewController(detailController, animated: true)
         
     }

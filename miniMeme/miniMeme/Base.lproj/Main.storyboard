@@ -123,11 +123,12 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <size key="customSize" width="100" height="100"/>
                             </collectionViewCell>
                         </cells>
                         <connections>
-                            <outlet property="dataSource" destination="gEf-ho-t3a" id="9Mj-g3-rO8"/>
-                            <outlet property="delegate" destination="gEf-ho-t3a" id="z7U-gT-n2e"/>
+                            <outlet property="dataSource" destination="gEf-ho-t3a" id="9fC-hS-5Nb"/>
+                            <outlet property="delegate" destination="gEf-ho-t3a" id="eJN-pa-jTV"/>
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Collection" id="Wqx-Ee-Lfz"/>
@@ -157,15 +158,19 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeCells" rowHeight="50" id="xhz-Pn-wcJ">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeCells" rowHeight="80" id="xhz-Pn-wcJ">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xhz-Pn-wcJ" id="sTj-PU-Q14">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="WZV-6R-UK7" id="yYA-PZ-jRN"/>
+                                    <outlet property="delegate" destination="WZV-6R-UK7" id="f3N-ob-NPg"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
