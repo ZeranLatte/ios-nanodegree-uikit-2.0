@@ -99,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-38" y="753"/>
+            <point key="canvasLocation" x="-437" y="-667"/>
         </scene>
         <!--Grid View-->
         <scene sceneID="3eE-Zm-rw4">
@@ -154,7 +154,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N3j-hC-r6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384" y="387"/>
+            <point key="canvasLocation" x="384" y="535"/>
         </scene>
         <!--MemeTableViewController-->
         <scene sceneID="kvf-QN-tlP">
@@ -201,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpT-wp-W9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384" y="-278"/>
+            <point key="canvasLocation" x="384" y="-574"/>
         </scene>
         <!--Meme Detail View-->
         <scene sceneID="hbk-Fs-c0O">

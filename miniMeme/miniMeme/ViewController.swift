@@ -42,7 +42,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         topTextField.delegate = self
         bottomTextField.delegate = self
         
-        
         topTextField.defaultTextAttributes = memeTextAttributes
         bottomTextField.defaultTextAttributes = memeTextAttributes
         
@@ -55,14 +54,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         unsubscribeFromKeyboardNotification()
     }
     
-    
-    @IBAction func cancelAction(sender: AnyObject) {
-        imagePickerView.image = nil
-        viewDidLoad()
-        viewWillAppear(false)
-    }
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -97,8 +88,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
         }
-        presentViewController(avc, animated: true, completion: nil)
-        //save()
+        self.presentViewController(avc, animated: true, completion: nil)
     }
     
     // - UIImagePickerControllerDelegate methods
@@ -110,8 +100,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             shareButton.enabled = true
             dismissViewControllerAnimated(true, completion: nil)
         }
-        
-        
     }
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -160,11 +148,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     // Generating a Meme Object
-//    func save() -> Meme {
-//        let saved = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
-//        return saved
-//    }
-    
     func generateMemedImage() -> UIImage {
         
         toolBar.hidden = true
