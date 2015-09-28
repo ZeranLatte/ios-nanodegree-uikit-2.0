@@ -11,13 +11,14 @@ import UIKit
 
 class MemeTableViewController: UIViewController, UITableViewDataSource{
     
+    @IBOutlet weak var memeTableView: UITableView!
     var memes: [Meme] {
         return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        print(memes.count)
+        memeTableView.reloadData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -11,8 +11,14 @@ import UIKit
 
 class MemeCollectionViewController: UICollectionViewController {
     
+    @IBOutlet weak var memeCollectionView: UICollectionView!
     var memes: [Meme] {
         return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        memeCollectionView.reloadData()
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

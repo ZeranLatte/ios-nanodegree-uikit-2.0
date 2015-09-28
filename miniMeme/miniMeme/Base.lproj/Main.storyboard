@@ -151,6 +151,9 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="f29-KE-roI"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="memeCollectionView" destination="YHY-tr-JVS" id="yXu-3u-9mL"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N3j-hC-r6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -198,6 +201,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="memeTableView" destination="4WZ-Ci-f7Y" id="B2A-iA-AOr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpT-wp-W9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,7 +267,7 @@
         <scene sceneID="Ya5-0q-5Ma">
             <objects>
                 <tabBarController storyboardIdentifier="TabBarController" title="Sent Memes" id="3sV-L8-Y76" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="rsC-dE-XfF">
+                    <navigationItem key="navigationItem" title="Sent Memes" id="rsC-dE-XfF">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="jBO-ma-Dhp">
                             <connections>
                                 <segue destination="vXZ-lx-hvc" kind="modal" id="17u-tG-BsT"/>
@@ -284,6 +290,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="suz-bC-h0U"/>
+        <segue reference="17u-tG-BsT"/>
     </inferredMetricsTieBreakers>
 </document>
