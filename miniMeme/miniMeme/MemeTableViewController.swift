@@ -47,7 +47,6 @@ class MemeTableViewController: UIViewController, UITableViewDataSource{
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if(editingStyle == UITableViewCellEditingStyle.Delete) {
-            //memes.removeAtIndex(indexPath.row)
             let memeDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             memeDelegate.memes.removeAtIndex(indexPath.row)
             memeTableView.reloadData()

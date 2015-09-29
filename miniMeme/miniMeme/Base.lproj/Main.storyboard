@@ -197,7 +197,7 @@
                         <nil key="title"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="2Ou-KS-ola">
                             <connections>
-                                <segue destination="vXZ-lx-hvc" kind="push" id="suz-bC-h0U"/>
+                                <segue destination="vXZ-lx-hvc" kind="modal" id="suz-bC-h0U"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -294,6 +294,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Any-ts-JR1"/>
+        <segue reference="17u-tG-BsT"/>
     </inferredMetricsTieBreakers>
 </document>
