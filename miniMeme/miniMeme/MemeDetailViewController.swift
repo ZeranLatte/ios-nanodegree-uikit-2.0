@@ -30,8 +30,8 @@ class MemeDetailViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let memeEditorVC = segue.destinationViewController as! ViewController
         
-        memeEditorVC.imagePickerView?.image = self.meme.memedImage
-        memeEditorVC.topTextField?.text = "self.meme.topText"
+        memeEditorVC.imagePickerView?.image = self.meme.originalImage
+        memeEditorVC.topTextField?.text = self.meme.topText
         memeEditorVC.bottomTextField?.text = self.meme.bottomText
     }
     
