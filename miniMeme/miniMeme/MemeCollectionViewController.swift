@@ -39,4 +39,5 @@ class MemeCollectionViewController: UICollectionViewController {
         detailController.meme = memes[indexPath.row]
         self.navigationController!.pushViewController(detailController, animated: true)
     }
+    
 }

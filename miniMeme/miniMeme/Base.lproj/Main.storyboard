@@ -18,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F9n-cR-QLf">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F9n-cR-QLf">
                                 <rect key="frame" x="0.0" y="51" width="320" height="473"/>
                             </imageView>
-                            <toolbar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5P6-dE-Qzv">
+                            <toolbar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5P6-dE-Qzv">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
                                     <barButtonItem title="Album" id="jK5-6I-wzN">
@@ -36,7 +36,7 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5d4-2H-9k8" userLabel="bottomTextField">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5d4-2H-9k8" userLabel="bottomTextField">
                                 <rect key="frame" x="105" y="495" width="110" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
@@ -221,27 +221,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mpu-jh-2dm">
-                                <rect key="frame" x="0.0" y="24" width="320" height="521"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpu-jh-2dm">
+                                <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="521" id="kWD-uS-BXG"/>
+                                    <constraint firstAttribute="height" constant="488" id="kWD-uS-BXG"/>
                                     <constraint firstAttribute="width" constant="320" id="m9D-ha-apo"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mpu-jh-2dm" firstAttribute="centerY" secondItem="1NE-Ro-NlL" secondAttribute="centerY" id="1si-Yf-CHP"/>
+                            <constraint firstItem="mpu-jh-2dm" firstAttribute="centerY" secondItem="1NE-Ro-NlL" secondAttribute="centerY" constant="18" id="1si-Yf-CHP"/>
                             <constraint firstItem="mpu-jh-2dm" firstAttribute="centerX" secondItem="1NE-Ro-NlL" secondAttribute="centerX" id="LV0-Wy-8DO"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="3Vh-j1-JIY"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="mpu-jh-2dm" id="8Cq-Uq-OAK"/>
+                        <segue destination="vXZ-lx-hvc" kind="modal" identifier="detailToEdit" id="Any-ts-JR1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hk6-YU-eYS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="819" y="-278"/>
+            <point key="canvasLocation" x="767" y="-574"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7yg-5R-JCT">
@@ -290,6 +294,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="17u-tG-BsT"/>
+        <segue reference="Any-ts-JR1"/>
     </inferredMetricsTieBreakers>
 </document>
