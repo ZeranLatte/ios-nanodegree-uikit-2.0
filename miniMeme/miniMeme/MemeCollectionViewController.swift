@@ -12,12 +12,14 @@ import UIKit
 class MemeCollectionViewController: UICollectionViewController {
     
     @IBOutlet weak var memeCollectionView: UICollectionView!
+    @IBOutlet weak var editButton: UIBarButtonItem!
     var memes: [Meme] {
         return (UIApplication.sharedApplication().delegate as! AppDelegate).memes
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        editButton.enabled = true
         memeCollectionView.reloadData()
     }
     
@@ -31,6 +33,7 @@ class MemeCollectionViewController: UICollectionViewController {
         
         //set image
         cell.memeImageView?.image = meme.memedImage
+        cell.deleteButton.hidden = true
         return cell
     }
     
@@ -39,5 +42,9 @@ class MemeCollectionViewController: UICollectionViewController {
         detailController.meme = memes[indexPath.row]
         self.navigationController!.pushViewController(detailController, animated: true)
     }
+    
+//    override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
+//        <#code#>
+//    }
     
 }
