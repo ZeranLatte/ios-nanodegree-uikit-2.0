@@ -116,17 +116,17 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="memeCollectionCell" id="gej-I2-4WW" customClass="MemeCollectionViewCell" customModule="miniMeme" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="130" height="130"/>
+                                <rect key="frame" x="0.0" y="64" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eHN-7r-5f2">
-                                            <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQi-Nm-zhq">
-                                            <rect key="frame" x="-2" y="98" width="30" height="30"/>
+                                            <rect key="frame" x="0.0" y="90" width="30" height="30"/>
                                             <state key="normal" image="deleteIcon"/>
                                         </button>
                                     </subviews>
@@ -138,7 +138,7 @@
                                     <constraint firstItem="eHN-7r-5f2" firstAttribute="top" secondItem="gej-I2-4WW" secondAttribute="topMargin" constant="-8" id="gAj-hD-PYl"/>
                                     <constraint firstItem="eHN-7r-5f2" firstAttribute="leading" secondItem="gej-I2-4WW" secondAttribute="leadingMargin" constant="-8" id="nBI-4p-zAa"/>
                                 </constraints>
-                                <size key="customSize" width="130" height="130"/>
+                                <size key="customSize" width="120" height="120"/>
                                 <connections>
                                     <outlet property="deleteButton" destination="UQi-Nm-zhq" id="6YK-V8-bsv"/>
                                     <outlet property="memeImageView" destination="eHN-7r-5f2" id="Wdd-ih-0Tz"/>
@@ -153,12 +153,12 @@
                     <tabBarItem key="tabBarItem" title="Collection" id="Wqx-Ee-Lfz"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Sent Memes" id="jlZ-5a-pw6">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="0i3-r7-Ryt"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="nT7-0y-j0u"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="f29-KE-roI"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="editButton" destination="0i3-r7-Ryt" id="TA2-Nx-FKi"/>
+                        <outlet property="editButton" destination="nT7-0y-j0u" id="ShC-nh-mqi"/>
                         <outlet property="memeCollectionView" destination="YHY-tr-JVS" id="yXu-3u-9mL"/>
                     </connections>
                 </collectionViewController>
@@ -278,6 +278,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="TabBarController" title="Sent Memes" id="3sV-L8-Y76" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Sent Memes" id="rsC-dE-XfF">
+                        <barButtonItem key="leftBarButtonItem" id="Vdw-4f-r8F"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="jBO-ma-Dhp">
                             <connections>
                                 <segue destination="vXZ-lx-hvc" kind="modal" id="17u-tG-BsT"/>
@@ -303,6 +304,6 @@
         <image name="deleteIcon" width="170" height="170"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="suz-bC-h0U"/>
+        <segue reference="17u-tG-BsT"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
     
-    
+    var memeToEdit: Meme!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var topTextField: UITextField!
@@ -34,6 +34,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         topTextField.textAlignment = .Center
         bottomTextField.textAlignment = .Center
         subscribeToKeyboardNotification()
+//        if (memeToEdit != nil) {
+//            setSentMeme(memeToEdit)
+//        }
     }
     
     override func viewDidLoad() {
@@ -47,6 +50,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         
         topTextField.text = "TOP"
         bottomTextField.text = "BOTTOM"
+        
+        if (memeToEdit != nil) {
+            setSentMeme(memeToEdit)
+        }
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -88,7 +95,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
         }
-        self.presentViewController(avc, animated: true, completion: nil)
+        presentViewController(avc, animated: true, completion: nil)
     }
     
     // - UIImagePickerControllerDelegate methods
@@ -153,8 +160,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         toolBar.hidden = true
         navBar.hidden = true
         // Render view to an image
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.drawViewHierarchyInRect(view.frame, afterScreenUpdates: true)
         let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -172,6 +179,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)
+    }
+    
+    // recieve a meme to be edited again
+    func setSentMeme(sentMeme: Meme) {
+        imagePickerView.image = sentMeme.originalImage
+        topTextField.text = sentMeme.topText
+        bottomTextField.text = sentMeme.bottomText
     }
     
 

@@ -18,6 +18,7 @@ class MemeTableViewController: UIViewController, UITableViewDataSource{
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        tabBarController?.navigationItem.leftBarButtonItem?.enabled = false
         memeTableView.reloadData()
     }
     
@@ -27,7 +28,7 @@ class MemeTableViewController: UIViewController, UITableViewDataSource{
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("memeCells", forIndexPath: indexPath)
-        let meme = self.memes[indexPath.row]
+        let meme = memes[indexPath.row]
         cell.imageView?.image = meme.memedImage
         cell.textLabel?.text = meme.topText
         return cell
@@ -36,8 +37,8 @@ class MemeTableViewController: UIViewController, UITableViewDataSource{
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailController = self.storyboard?.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
-        detailController.meme = self.memes[indexPath.row]
-        self.navigationController!.pushViewController(detailController, animated: true)
+        detailController.meme = memes[indexPath.row]
+        navigationController!.pushViewController(detailController, animated: true)
         
     }
     
